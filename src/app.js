@@ -11,9 +11,9 @@ const Blog = require("./models/blog");
 
 const bodyParser = require("body-parser");
 
-// app.use(bodyParser.urlencoded({
-//     extended: true
-// }))
+app.use(bodyParser.urlencoded({
+    extended: true
+}))
 
 app.use('/static', express.static("public"))
 app.use('', routes);
