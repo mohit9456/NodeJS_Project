@@ -1,0 +1,30 @@
+<div id="carouselExampleIndicators"  data-bs-ride="carousel" class="carousel slide carousel-fade">
+  <div class="carousel-indicators">
+
+  {{#each slides}}
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{@index}}" class="{{this.class}}" aria-current="true" aria-label="Slide 1"></button>
+  {{/each}}
+  </div>
+  <div class="carousel-inner">
+
+
+  {{#each slides}}
+    <div class="carousel-item {{this.class}}" data-bs-interval="2000">
+      <img src="{{this.imageUrl}}" class="opacity-50  d-block w-100 slider-image h-50" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h1 class=" text-dark" style="font-family:Coronetscript, cursive; font-size: 60px; font-weight: 900;">{{this.title}}</h1>
+        <p style="font-family: Consolas; font-weight: bold; font-size: 30px; font-weight: 900; color: #014d84;">{{this.subTitle}}</p>
+      </div>
+    </div>
+
+  {{/each}}
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>

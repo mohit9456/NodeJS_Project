@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Learn Coding- Blogs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="https://kit.fontawesome.com/63acc2c5e9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    {{>navbar data=details}}
+    
+    {{!-- SLUG5 --}}
+
+
+     <div class="container my-4 py-4">
+        <h5 class="card-title fs-2 fw-bolder">Deployment of Nodejs App in Android <hr class="w-75" /></h5>
+        <h5 class="pb-2 pt-4 card-title fs-2 fw-bolder">Step 1 - Install Nodejs</h5>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 ">Let's download nodejs from Nodesource. NodeSource is a company which provides enterprise-grade Node<br /> support and maintains a repository containing the latest versions of Node.js.</span>
+            <span id="myText" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -</span> <button id="cpy" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 ">Let's install nodejs now:</span>
+            <span id="myText1" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">sudo apt-get install -y nodejs</span>  <button id="cpy1" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent1()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 ">Check the installation of node and npm using the following commands:</span>
+            <span id="myText2" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">node --version && npm --version</span> <button id="cpy2" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent2()">Copy !</button>
+        </div>
+        <h5 class="pb-2 pt-4 card-title fs-2 fw-bolder">Step 2 - Creating a sample nodejs file</h5>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 ">Let's create a sample app and paste some basic code into it.</span>
+            <span id="myText3" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">sudo vi app.js</span> <button id="cpy3" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent3()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 ">Paste the following code inside it:</span>
+            <span id="myText4" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">const express = require('express')
+<br />const app = express()
+<br />const port = 3000
+
+<br /><br />app.get('/', (req, res) => {
+  <br />res.send('Hello World!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`)
+})</span> <button id="cpy4" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent4()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 ">Lets now install express so that we can run this app server:</span>
+            <span id="myText5" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">npm install express</span> <button id="cpy5" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent5()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 ">run the application</span>
+            <span id="myText7" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">node app.js</span> <button id="cpy7" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent7()">Copy !</button>
+        </div>
+        <h5 class="pb-2 pt-4 card-title fs-2 fw-bolder">Step 3 - Using pm2 as a process manager</h5>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 ">Let's install and use pm2 as a process manager. Install pm2 using the commands below:</span>
+            <span id="myText8" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">sudo npm i pm2 -g</span> <button id="cpy8" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent8()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 ">Start the application using the following command:</span>
+            <span id="myText9" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">pm2 start app.js</span> <button id="cpy9" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent9()">Copy !</button>
+        </div>
+        <h5 class="pb-2 pt-4 card-title fs-2 fw-bolder">Step 4 - Configuring Nginx as a reverse proxy</h5>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 ">Now let's configure Nginx as a reverse proxy. This will help us get the security features from Nginx. Also, we can <br /> serve static content using Nginx.
+
+<br /><br />Let's install Nginx using the following command:</span>
+            <span id="myText10" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">sudo apt install nginx</span> <button id="cpy10" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent10()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 ">Let's create a conf file for our Nodejs app using the command below</span>
+            <span id="myText11" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">sudo vi /etc/nginx/sites-available/nodeApp</span> <button id="cpy11" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent11()">Copy !</button>
+        </div>
+        </div>
+        <div class=" container d-flex flex-column py-2">
+            <span class=" py-2 ">Copy the following content to this file</span>
+            <span id="myText12" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">server{
+  <br />server_name 165.232.177.116;
+
+      <br /><br />location / {
+        <br />proxy_pass http://localhost:3000;
+        <br />proxy_http_version 1.1;
+        <br />proxy_set_header Upgrade $http_upgrade;
+        <br />proxy_set_header Connection 'upgrade';
+        <br />proxy_set_header Host $host;
+        <br />proxy_cache_bypass $http_upgrade;
+    }
+}</span>  <button id="cpy12" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent12()">Copy !</button>
+        </div>
+        <div class="container d-flex flex-column py-2">
+            <span class=" py-2 ">Activate this configuration using the command below:</span>
+            <span id="myText13" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">sudo ln -s /etc/nginx/sites-available/nodeApp /etc/nginx/sites-enabled</span> <button id="cpy13" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent13()">Copy !</button>
+        </div>
+
+     </div>
+
+    {{>footer}}
+
+    <script>
+        
+        const copyContent = async () => {
+            let text = document.getElementById('myText').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy').innerHTML = "Copied !"
+        }
+
+        const copyContent13 = async () => {
+            let text = document.getElementById('myText13').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy13').innerHTML = "Copied !"
+        }
+
+        const copyContent2 = async () => {
+            let text = document.getElementById('myText2').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy2').innerHTML = "Copied !"
+        }
+
+        const copyContent3 = async () => {
+            let text = document.getElementById('myText3').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy3').innerHTML = "Copied !"
+        }
+
+        const copyContent4 = async () => {
+            let text = document.getElementById('myText4').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy4').innerHTML = "Copied !"
+        }
+
+        const copyContent5 = async () => {
+            let text = document.getElementById('myText5').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy5').innerHTML = "Copied !"
+        }
+
+        const copyContent1 = async () => {
+            let text = document.getElementById('myText1').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy1').innerHTML = "Copied !"
+        }
+
+        const copyContent7 = async () => {
+            let text = document.getElementById('myText7').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy7').innerHTML = "Copied !"
+        }
+
+        const copyContent8 = async () => {
+            let text = document.getElementById('myText8').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy8').innerHTML = "Copied !"
+        }
+
+        const copyContent9 = async () => {
+            let text = document.getElementById('myText9').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy9').innerHTML = "Copied !"
+        }
+
+        const copyContent10 = async () => {
+            let text = document.getElementById('myText10').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy10').innerHTML = "Copied !"
+        }
+
+        const copyContent11 = async () => {
+            let text = document.getElementById('myText11').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy11').innerHTML = "Copied !"
+        }
+
+        const copyContent12 = async () => {
+            let text = document.getElementById('myText12').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy12').innerHTML = "Copied !"
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

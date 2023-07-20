@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Learn Coding- Blogs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="https://kit.fontawesome.com/63acc2c5e9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    {{>navbar data=details}}
+    
+    {{!-- SLUG12 --}}
+
+    <div class="container my-4 py-4">
+        <h5 class="card-title fs-2 fw-bolder">How to use Google Chrome as a Text Editor?<hr class="w-75" /></h5>
+        <p class="fs-5 w-75 py-2 text-secondary"> I will tell you top 2 tricks to turn your chrome browser into a notepad. Follow the steps given below to use chrome browser as a notepad :</p>
+
+        <div class="d-flex flex-column py-2 w-75">
+            <p class="w-75 py-2 "><b>METHOD 1 :</b> The first trick is a code snippet from which allows you to convert a normal chrome tab into a notepad. Follow the steps given below to convert a normal tab into a notepad.</p>
+            <span class=" py-2 ">1. Open the chrome browser.</span>
+            <span class=" py-2 ">2. Copy and paste the code given below in the search bar of the chrome tab.
+<br />data:text/html, <`html contenteditable></span>
+            <span class=" py-2 ">3. Hit enter after pasting the above code.</span>
+            <span class=" py-2 ">4. That’s it! You will see a blank screen. You can note down anything there.</span>
+             <p class="fs-5 w-75 py-2 text-secondary">Note : You will all the content if you close the tab. So, make sure that you save anything you typed before closing the tab. <br />Below is the steps to save the content :</p>
+            <span class=" py-2 ">1. Once you are done with writing on the chrome notepad, press CTRL+S.</span>
+            <span class=" py-2 ">2. A windows explorer pop up will get opened. Select the location where you want to save the document.</span>
+            <span class=" py-2 ">3. Click on the save button.</span>
+            <p class="fs-5 w-75 py-2 text-secondary"> All your content will be downloaded as a HTML file on your computer. You can open this file anytime you want.</p>
+            <p class="w-75 py-2 "><b>METHOD 2 :</b> The second method is a chrome extension named Notepad. <a class="text-decoration-none" href="https://chrome.google.com/webstore/detail/notepad/ffbhefmlcoihbjcmibbfkocmnaiacinp/related">Click here</a> to add this extension to your chrome browser. Click on the “Add To Chrome” and this extension will be installed on your chrome browser</p>
+            <span class=" py-2 ">With the help of Notepad extension, you don’t even need to open a new tab. You can start taking notes on pre-existing tabs itself. Whenever you want to take a note, click on the extensions icon and select the Notepad extension. A notepad as shown in the below animation will get open.
+
+<br /><br />To save your notes, click on the three dotes on the top right corner of the notepad and select Download as Plain Text. A text will be downloaded in your computer.</span>
+            
+        </div>
+        <p class="fs-5 w-75 py-2 text-secondary"> So, that’s how you can easily take quick notes. I recommend you to use the second method as Notepad extension provides some additional features such as text alignment, text style etc.</p>
+    </div>
+
+    {{>footer}}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

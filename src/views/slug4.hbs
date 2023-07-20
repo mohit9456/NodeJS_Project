@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Learn Coding- Blogs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="https://kit.fontawesome.com/63acc2c5e9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    {{>navbar data=details}}
+    
+    {{!-- SLUG4 --}}
+
+    <div class="container my-4 py-4">
+        <h5 class="card-title fs-2 fw-bolder">MySQL cheatsheet <hr class="w-75" /></h5>
+        <p class="fs-5 py-2 fw-bold text-secondary">It is defined as a collection of interrelated data stored together to serve multiple applications.</p>
+        <h5 class="pb-2 pt-4 card-title fs-2 fw-bolder text-decoration-underline">MySQL Elements</h5>
+        
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Literals</span>
+            <span id="myText" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">17 #It is a numeric literal
+<br />"Mohit" #It is a text literal
+<br />12.5 #It is a real literal</span> <button id="cpy" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent()">Copy !</button>
+        </div>
+
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Data Types</span>
+            <span id="myText1" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">#Numeric
+
+<br /><br />INT -- Integer data type
+<br />TINYINT
+<br />SMALLINT
+<br />MEDIUMINT
+<br />BIGINT
+
+<br /><br />FLOAT(M,D) -- Floating point data type
+<br />DOUBLE(M,D) -- Double data type also stores decimal values
+<br />DECIMAL(M,D) -- Decimal data type
+<br />#Data and Time 
+
+<br /><br />DATE -- Date data type (YYYY-MM-DD)
+<br />DATETIME -- It's a date and time combination (YYYY-MM-DD HH:MM:SS)
+<br />TIME -- It stores time (HH:MM:SS)
+<br />#String/Text 
+
+<br /><br />CHAR(M) -- Character data type
+<br />VARCHAR(M) -- Variable character data type
+<br />BLOB or TEXT</span> <button id="cpy1" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent1()">Copy !</button>
+        </div>
+
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">NULL Values</span>
+            <span id="myText2" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">Comments
+<br />A comment is a text that is not executed.
+
+<br /><br />/* This is a multi-line
+<br />comment in MySQL */
+
+<br /><br /># It is a single-line commend
+
+<br /><br />-- It is also a single-line comment
+</span>  <button id="cpy2" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent2()">Copy !</button>
+        </div>
+
+        <h5 class="pb-2 pt-4 card-title fs-2 fw-bolder text-decoration-underline">Accessing Database</h5>
+
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Show command</span>
+            <span id="myText3" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">Show databases;
+<br />show tables;</span> <button id="cpy3" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent3()">Copy !</button>
+        </div>
+
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Use command</span>
+            <span id="myText4" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">use database_name;</span> <button id="cpy4" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent4()">Copy !</button>
+        </div>
+
+        <h5 class="pb-2 pt-4 card-title fs-2 fw-bolder text-decoration-underline">Creating Tables </h5>
+
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Create table command</span>
+            <span id="myText5" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">Create table <table-name>
+<br />(column_name) (data_type),
+<br />(column_name) (data_type),
+<br />(column_name) (data_type));</span> <button id="cpy5" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent5()">Copy !</button>
+        </div>
+
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Insert command</span>
+            <span id="myText6" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">Insert into (table_name) [(column-list)]
+<br />Values ([value1],[value2]...);</span> <button id="cpy6" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent6()">Copy !</button>
+        </div>
+
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Inserting NULL values</span>
+            <span id="myText7" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">Inset into (table-name) (col1, col2,col3) 
+<br />Values (val1,val2,NULL);</span> <button id="cpy7" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent7()">Copy !</button>
+        </div>
+
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Inserting Dates</span>
+            <span id="myText8" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">Insert into <table_name> (<col_name>) 
+<br />Values ('2021-12-10');</span> <button id="cpy8" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent8()">Copy !</button>
+        </div>
+
+        <h5 class="pb-2 pt-4 card-title fs-2 fw-bolder text-decoration-underline">Select Command </h5>
+
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Selecting All Data</span>
+            <span id="myText9" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">Select * From (table_name);</span> <button id="cpy9" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent9()">Copy !</button>
+        </div>
+
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Selecting Particular Rows</span>
+            <span id="myText10" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">Select * from [table_name]
+<br />Where [condition_to_satisfy];</span> <button id="cpy10" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent10()">Copy !</button>
+        </div>
+
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Selecting Particular Columns</span>
+            <span id="myText11" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">Select column1, column2 from [table_name]
+<br />Where [condition_to_satisfy];</span> <button id="cpy11" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent11()">Copy !</button>
+        </div>
+
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">DISTINCT Keyword</span>
+            <span id="myText12" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">Select DISTINCT [column_name] from [table_name];</span> <button id="cpy12" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent12()">Copy !</button>
+        </div>
+
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">ALL Keyword</span>
+            <span id="myText13" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">Select ALL [column_name] from [table_name];</span> <button id="cpy13" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent13()">Copy !</button>
+        </div>
+
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Column Aliases</span>
+            <span id="myText14" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">Select [column1],[column2] AS [new_name]
+<br />From [table_name];</span> <button id="cpy14" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent14()">Copy !</button>
+        </div>
+
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Condition Based on a Range</span>
+            <span id="myText15" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">Select [co11], [col2] 
+<br />From [table_name]
+<br />Where [value1] Between [value2];</span> <button id="cpy15" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent15()">Copy !</button>
+        </div>
+
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Condition Based on a List</span>
+            <span id="myText16" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">Select * from [table_name] 
+<br />Where [column_name] IN ([val1],[val2],[val3]);
+<br />"Select * from [table_name] 
+<br />Where [column_name] NOT IN ([val1],[val2],[val3]);"</span> <button id="cpy16" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent16()">Copy !</button>
+        </div>
+        
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Condition Based on Pattern Match</span>
+            <span id="myText17" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">Select [col1],[col2] 
+<br />From [table_name]
+<br />Where [column] LIKE 'Ha%';
+
+<br /><br />Select [col1],[col2] 
+<br />From [table_name]
+<br />Where [column] LIKE 'Ha__y%';</span> <button id="cpy17" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent17()">Copy !</button>
+        </div>
+
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Searching NULL</span>
+            <span id="myText18" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">Select [column1], [column2]
+<br />From [table_name] Where [Val] IS NULL;</span> <button id="cpy18" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent18()">Copy !</button>
+        </div>
+
+        <h5 class="pb-2 pt-4 card-title fs-2 fw-bolder text-decoration-underline">Modifying Data </h5>
+
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Update Command</span>
+            <span id="myText19" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">Update [table_name]
+<br />SET [col1] = [new_value], [col2] = [new_value]
+<br />Where [condition];</span> <button id="cpy19" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent19()">Copy !</button>
+        </div>
+
+        <h5 class="pb-2 pt-4 card-title fs-2 fw-bolder text-decoration-underline">Deleting Data </h5>
+
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Delete Command</span>
+            <span id="myText20" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">Delete From [table_name]
+<br />Where [condition];</span> <button id="cpy20" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent20()">Copy !</button>
+        </div>
+
+        <h5 class="pb-2 pt-4 card-title fs-2 fw-bolder text-decoration-underline">Ordering Records </h5>
+
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">order by clause</span>
+            <span id="myText21" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">Select * from [table_name] order by [column_name];</span> <button id="cpy21" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent21()">Copy !</button>
+        </div>
+
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Ordering data on multiple columns</span>
+            <span id="myText22" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">Select * From [table_name] order by [column1] ASC, [column2] DESC;</span> <button id="cpy22" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent22()">Copy !</button>
+        </div>
+
+        <h5 class="pb-2 pt-4 card-title fs-2 fw-bolder text-decoration-underline">Grouping Result </h5>
+
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Group by clause</span>
+            <span id="myText23" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">Select [column], Count(*) from [table_name] group by [column];</span> <button id="cpy23" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent23()">Copy !</button>
+        </div>
+
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Having clause</span>
+            <span id="myText24" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">Select avg([column]), sum([column]) from [table_name] group by [column_name] having [condition_to_satisfy];</span> <button id="cpy24" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent24()">Copy !</button>
+        </div>
+
+        <h5 class="pb-2 pt-4 card-title fs-2 fw-bolder text-decoration-underline">Altering Table </h5>
+
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">To Add New Column</span>
+            <span id="myText25" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">Alter Table [table_name]
+<br />Add [new_column];</span> <button id="cpy25" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent25()">Copy !</button>
+        </div>
+
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">To Modify Old Column</span>
+            <span id="myText26" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">Alter Table [table_name]
+<br />Modify [old_column_name] [[new_data_type][size]];</span> <button id="cpy26" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent26()">Copy !</button>
+        </div>
+
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">To Change Name of Column</span>
+            <span id="myText27" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">Alter Table Change [old_column_name] [new_column_name][data_type];</span> <button id="cpy27" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent27()">Copy !</button>
+        </div>
+
+        <h5 class="pb-2 pt-4 card-title fs-2 fw-bolder text-decoration-underline">Dropping Table </h5>
+
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">DROP command</span>
+            <span id="myText28" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">Drop table [table_name];</span> <button id="cpy28" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent28()">Copy !</button>
+        </div>
+
+        <h5 class="pb-2 pt-4 card-title fs-2 fw-bolder text-decoration-underline">Text/String Functions </h5>
+
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Char Function</span>
+            <span id="myText29" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">Select Char(72,97,114,114,121);</span> <button id="cpy29" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent29()">Copy !</button>
+        </div>
+
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Concat Function</span>
+            <span id="myText30" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">Select Concat("Kanha","Ji");</span> <button id="cpy30" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent30()">Copy !</button>
+        </div>
+
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Lower/Lcase</span>
+            <span id="myText31" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">Select Lower("Kanha Ji");</span> <button id="cpy31" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent31()">Copy !</button>
+        </div>
+
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Upper/Ucase</span>
+            <span id="myText32" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">Select Upper("KanhaJi");</span> <button id="cpy32" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent32()">Copy !</button>
+        </div>
+
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Substr</span>
+            <span id="myText33" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">Select Substr(string,m,n);</span> <button id="cpy33" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent33()">Copy !</button>
+        </div>
+
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Trim</span>
+            <span id="myText34" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">Select Trim(leading ' ' FROM ' Kanha Ji');</span> <button id="cpy34" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent34()">Copy !</button>
+        </div>
+
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Instr</span>
+            <span id="myText35" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">Select Instr(String1,String2);</span> <button id="cpy35" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent35()">Copy !</button>
+        </div>
+
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Length</span>
+            <span id="myText36" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">Select Length(String)</span> <button id="cpy36" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent36()">Copy !</button>
+
+        </div>
+        
+    </div>
+
+    {{>footer}}
+
+
+
+    <script>
+        
+        const copyContent = async () => {
+            let text = document.getElementById('myText').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy').innerHTML = "Copied !"
+        }
+
+        const copyContent1 = async () => {
+            let text = document.getElementById('myText1').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy1').innerHTML = "Copied !"
+        }
+
+        const copyContent2 = async () => {
+            let text = document.getElementById('myText2').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy2').innerHTML = "Copied !"
+        }
+
+        const copyContent3 = async () => {
+            let text = document.getElementById('myText3').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy3').innerHTML = "Copied !"
+        }
+
+        const copyContent4 = async () => {
+            let text = document.getElementById('myText4').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy4').innerHTML = "Copied !"
+        }
+
+        const copyContent5 = async () => {
+            let text = document.getElementById('myText5').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy5').innerHTML = "Copied !"
+        }
+
+        const copyContent6 = async () => {
+            let text = document.getElementById('myText6').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy6').innerHTML = "Copied !"
+        }
+
+        const copyContent7 = async () => {
+            let text = document.getElementById('myText7').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy7').innerHTML = "Copied !"
+        }
+
+        const copyContent8 = async () => {
+            let text = document.getElementById('myText8').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy8').innerHTML = "Copied !"
+        }
+
+        const copyContent9 = async () => {
+            let text = document.getElementById('myText9').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy9').innerHTML = "Copied !"
+        }
+
+        const copyContent10 = async () => {
+            let text = document.getElementById('myText10').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy10').innerHTML = "Copied !"
+        }
+
+        const copyContent11 = async () => {
+            let text = document.getElementById('myText11').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy11').innerHTML = "Copied !"
+        }
+
+        const copyContent12 = async () => {
+            let text = document.getElementById('myText12').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy12').innerHTML = "Copied !"
+        }
+
+        const copyContent13 = async () => {
+            let text = document.getElementById('myText13').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy13').innerHTML = "Copied !"
+        }
+
+        const copyContent14 = async () => {
+            let text = document.getElementById('myText14').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy14').innerHTML = "Copied !"
+        }
+
+        const copyContent15 = async () => {
+            let text = document.getElementById('myText15').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy15').innerHTML = "Copied !"
+        }
+
+        const copyContent16 = async () => {
+            let text = document.getElementById('myText16').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy16').innerHTML = "Copied !"
+        }
+
+        const copyContent17 = async () => {
+            let text = document.getElementById('myText17').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy17').innerHTML = "Copied !"
+        }
+
+        const copyContent18 = async () => {
+            let text = document.getElementById('myText18').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy18').innerHTML = "Copied !"
+        }
+
+        const copyContent19 = async () => {
+            let text = document.getElementById('myText19').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy19').innerHTML = "Copied !"
+        }
+
+        const copyContent20 = async () => {
+            let text = document.getElementById('myText20').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy20').innerHTML = "Copied !"
+        }
+
+        const copyContent21 = async () => {
+            let text = document.getElementById('myText21').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy21').innerHTML = "Copied !"
+        }
+
+        const copyContent22 = async () => {
+            let text = document.getElementById('myText22').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy22').innerHTML = "Copied !"
+        }
+
+        const copyContent23 = async () => {
+            let text = document.getElementById('myText23').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy23').innerHTML = "Copied !"
+        }
+
+        const copyContent24 = async () => {
+            let text = document.getElementById('myText24').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy24').innerHTML = "Copied !"
+        }
+
+        const copyContent25 = async () => {
+            let text = document.getElementById('myText25').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy25').innerHTML = "Copied !"
+        }
+
+        const copyContent26 = async () => {
+            let text = document.getElementById('myText26').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy26').innerHTML = "Copied !"
+        }
+
+        const copyContent27 = async () => {
+            let text = document.getElementById('myText27').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy27').innerHTML = "Copied !"
+        }
+
+        const copyContent28 = async () => {
+            let text = document.getElementById('myText28').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy28').innerHTML = "Copied !"
+        }
+
+        const copyContent29 = async () => {
+            let text = document.getElementById('myText29').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy29').innerHTML = "Copied !"
+        }
+
+        const copyContent30 = async () => {
+            let text = document.getElementById('myText30').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy30').innerHTML = "Copied !"
+        }
+
+        const copyContent31 = async () => {
+            let text = document.getElementById('myText31').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy31').innerHTML = "Copied !"
+        }
+
+        const copyContent32 = async () => {
+            let text = document.getElementById('myText32').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy32').innerHTML = "Copied !"
+        }
+
+        const copyContent33 = async () => {
+            let text = document.getElementById('myText33').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy33').innerHTML = "Copied !"
+        }
+
+        const copyContent34 = async () => {
+            let text = document.getElementById('myText34').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy34').innerHTML = "Copied !"
+        }
+
+        const copyContent35 = async () => {
+            let text = document.getElementById('myText35').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy35').innerHTML = "Copied !"
+        }
+
+        const copyContent36 = async () => {
+            let text = document.getElementById('myText36').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy36').innerHTML = "Copied !"
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

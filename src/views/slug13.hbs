@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Learn Coding- Blogs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="https://kit.fontawesome.com/63acc2c5e9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    {{>navbar data=details}}
+    
+    {{!-- SLUG12 --}}
+
+    <div class="container my-4 py-4">
+        <h5 class="card-title fs-2 fw-bolder w-75">How to Password Protect a Folder in Windows 10 Without Any Additional Software<hr class="w-75" /></h5>
+        <p class="fs-5 w-75 py-2 text-secondary">With just a simple .bat file, you can protect your folders easily. Whenever you want to open the protected folder, a password will be required before the folder becomes visible and accessible. <br />So, without further delay, follow the steps given below to password protect a folder :</p>
+
+        <div class="d-flex flex-column py-2 w-75">
+            <span class=" py-2 "><b>1</b>. First of all, open the folder you want to secure with a password. You can see in the below animation that I’ve created a folder named “Demo,” which consists of an image and an HTML file.</span>
+            <span class=" py-2 "><b>2</b>. Now, create a new text file inside the same folder. You can name the text file according to your choice. I’m naming it “LockedFolder.txt.”</span>
+            <span class=" py-2 "><b>3</b>. <a class="text-decoration-none" href="https://gist.github.com/pknowledge/1feef32fa21475eb9742ea247aefe1af#file-folderlock-bat">Click here</a>, and you’ll be redirected to a GitHub repository. Copy the code given on the repo and paste it into the text file that you’ve created in the last step.</span>
+            <span class=" py-2 "><b> </b>4. Now, open the text file and move your cursor to line number 21(if NOT %pass%== YOUR-PASSWORD goto FAIL). Replace YOUR-PASSWORD with the password of your choice. In the below animation, you can see that I’ve used “DemoPass” as my password.</span>
+            <span class=" py-2 "><b>5</b>. Now, click on the File option in the top left corner. Click on the Save as button and save the file as “LockedFolder.bat.”</span>
+            <span class=" py-2 "><b>6</b>. Now, double click on the “LockedFolder.bat,” and a folder named “Private” will be created automatically.</span>
+            <span class=" py-2 "><b>7</b>. Move all the files you want to hide inside the Private folder that we’ve just created in the last step.</span>
+            <span class=" py-2 "><b>8</b>. Again double click on the “LockedFolder.bat” A command prompt window will open asking you that “Are you sure you want to lock this folder?”. Type Y and hit enter as shown in the below animation.</span>
+            <span class=" py-2 "><b>9</b>. Once you hit enter, your Private folder will be automatically hidden, and only LockedFolder.bat will be visible to you.</span>
+            <span class=" py-2 "><b>10</b>. To open your secured folder, double click on the LockedFolder.bat file. A command prompt window will open asking you the password of the secured folder.</span>
+            <span class=" py-2 "><b>11</b>. Type the password and hit enter. Once you do that, your hidden folder will be displayed to you successfully.</span>
+            <span class=" py-2 "><b>12</b>. If you want to hide your Private folder again, all you need to do is double-click on the “LockedFolder.bat” file again. <br />So that’s how you can easily hide your private files without using any additional software.</span>
+        </div>
+    </div>
+
+    {{>footer}}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Learn Coding- Blogs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="https://kit.fontawesome.com/63acc2c5e9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    {{>navbar data=details}}
+    
+    {{!-- SLUG2 --}}
+
+    <div class="container my-4 py-4">
+        <h5 class="card-title fs-2 fw-bolder">Most linux commands that you should know <hr class="w-75" /></h5>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bolder">ls - list the files and directories in the current directory</span>
+            <span id="myText" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">ls</span>
+            <button id="cpy" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bolder">cd - change the current directory</span>
+            <span id="myText1" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">cd dir_name</span>
+            <button id="cpy1" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent1()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bolder">mkdir - create a new directory</span>
+            <span id="myText2" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">mkdir mohit</span>
+            <button id="cpy2" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent2()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bolder">rmdir - remove a directory</span>
+            <span id="myText3" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">rmdir mohit</span>
+            <button id="cpy3" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent3()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bolder">pwd - print the current working directory</span>
+            <span id="myText4" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">pwd</span>
+            <button id="cpy4" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent4()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bolder">cp - copy files or directories</span>
+            <span id="myText5" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">#We will copy a file called example.txt from the current directory to a directory called backup <br/> cp example.txt backup/</span>
+            <button id="cpy5" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent5()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bolder">mv - move or rename files or directories</span>
+            <span id="myText6" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">mv example.txt backup/</span>
+            <button id="cpy6" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent6()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bolder">rm - remove files or directories</span>
+            <span id="myText7" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">rm example.txt</span>
+            <button id="cpy7" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent7()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bolder">touch - create a new empty file or update the timestamp of an existing file</span>
+            <span id="myText8" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">touch null.txt</span>
+            <button id="cpy8" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent8()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bolder">cat - concatenate and display files</span>
+            <span id="myText9" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">cat example.txt</span>
+            <button id="cpy9" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent9()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bolder">man - manual for a command</span>
+            <span id="myText10" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">man ls</span>
+            <button id="cpy10" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent10()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bolder">htop - an interactive process viewer and system monitor</span>
+            <span id="myText11" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">htop</span>
+            <button id="cpy11" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent11()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bolder">gzip - compress files</span>
+            <span id="myText12" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">gzip file.txt</span>
+            <button id="cpy12" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent12()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bolder">gunzip - decompress compressed files</span>
+            <span id="myText13" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">gunzip file.txt.gz</span>
+            <button id="cpy13" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent13()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bolder">ssh - connect to a remote server securely</span>
+            <span id="myText14" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">ssh username@server_address</span>
+            <button id="cpy14" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent14()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bolder">scp - securely copy files between systems</span>
+            <span id="myText15" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">scp myfile.txt user@remotehost:/home/user/</span>
+            <button id="cpy15" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent15()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bolder">ping - test network connectivity</span>
+            <span id="myText16" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">ping 8.8.8.8</span>
+            <button id="cpy16" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent16()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bolder">ifconfig - display or configure network interfaces</span>
+            <span id="myText17" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">ifconfig</span>
+            <button id="cpy17" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent17()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bolder">netstat - display network connection information</span>
+            <span id="myText18" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">netstat</span>
+            <button id="cpy18" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent18()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bolder">systemctl - control system services and settings</span>
+            <span id="myText19" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;"># Start the nginx service<br/>systemctl start nginx<br/><br/># Check the status of the nginx service<br/>systemctl status nginx<br/><br/># Stop the nginx service<br/>systemctl stop nginx</span>
+            <button id="cpy19" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent19()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bolder">route - view or configure network routing tables</span>
+            <span id="myText20" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">route [options] [add/delete/show]</span>
+            <button id="cpy20" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent20()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bolder">top - display system resource usage and processes </span>
+            <span id="myText21" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">top</span>
+            <button id="cpy21" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent21()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bolder">ps - display information about running processes</span>
+            <span id="myText22" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">ps aux</span>
+            <button id="cpy22" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent22()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bolder">kill - terminate a process</span>
+            <span id="myText23" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">kill [PID]</span>
+            <button id="cpy23" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent23()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bolder">service - control system services</span>
+            <span id="myText24" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">service jupiter start</span>
+            <button id="cpy24" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent24()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bolder">useradd - add a new user to the system</span>
+            <span id="myText25" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">useradd mohit</span>
+            <button id="cpy25" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent25()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bolder">passwd - change the password for a user</span>
+            <span id="myText26" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">passwd mohit</span>
+            <button id="cpy26" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent26()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bolder">userdel - delete a user from the system</span>
+            <span id="myText27" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">userdel mohit</span>
+            <button id="cpy27" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent27()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bolder">su - switch user to become another user</span>
+            <span id="myText28" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">su john</span>
+            <button id="cpy28" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent28()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bolder">sudo - execute a command as another user or with elevated privileges</span>
+            <span id="myText29" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">sudo</span>
+            <button id="cpy29" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent29()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bolder">uptime - display system uptime and load average</span>
+            <span id="myText30" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">uptime</span>
+            <button id="cpy30" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent30()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bolder">df - display disk space usage</span>
+            <span id="myText31" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">df</span>
+            <button id="cpy31" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent31()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bolder">du - display disk usage by file or directory</span>
+            <span id="myText32" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">du</span>
+            <button id="cpy32" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent32()">Copy !</button>
+        </div>
+    </div>
+
+    {{>footer}}
+
+
+
+
+    <script>
+        
+        const copyContent = async () => {
+            let text = document.getElementById('myText').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy').innerHTML = "Copied !"
+        }
+
+        const copyContent1 = async () => {
+            let text = document.getElementById('myText1').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy1').innerHTML = "Copied !"
+        }
+
+        const copyContent2 = async () => {
+            let text = document.getElementById('myText2').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy2').innerHTML = "Copied !"
+        }
+
+        const copyContent3 = async () => {
+            let text = document.getElementById('myText3').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy3').innerHTML = "Copied !"
+        }
+
+        const copyContent4 = async () => {
+            let text = document.getElementById('myText4').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy4').innerHTML = "Copied !"
+        }
+
+        const copyContent5 = async () => {
+            let text = document.getElementById('myText5').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy5').innerHTML = "Copied !"
+        }
+
+        const copyContent6 = async () => {
+            let text = document.getElementById('myText6').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy6').innerHTML = "Copied !"
+        }
+
+        const copyContent7 = async () => {
+            let text = document.getElementById('myText7').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy7').innerHTML = "Copied !"
+        }
+
+        const copyContent8 = async () => {
+            let text = document.getElementById('myText8').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy8').innerHTML = "Copied !"
+        }
+
+        const copyContent9 = async () => {
+            let text = document.getElementById('myText9').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy9').innerHTML = "Copied !"
+        }
+
+        const copyContent10 = async () => {
+            let text = document.getElementById('myText10').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy10').innerHTML = "Copied !"
+        }
+
+        const copyContent11 = async () => {
+            let text = document.getElementById('myText11').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy11').innerHTML = "Copied !"
+        }
+
+        const copyContent12 = async () => {
+            let text = document.getElementById('myText12').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy12').innerHTML = "Copied !"
+        }
+
+        const copyContent13 = async () => {
+            let text = document.getElementById('myText13').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy13').innerHTML = "Copied !"
+        }
+
+        const copyContent14 = async () => {
+            let text = document.getElementById('myText14').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy14').innerHTML = "Copied !"
+        }
+
+        const copyContent15 = async () => {
+            let text = document.getElementById('myText15').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy15').innerHTML = "Copied !"
+        }
+
+        const copyContent16 = async () => {
+            let text = document.getElementById('myText16').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy16').innerHTML = "Copied !"
+        }
+
+        const copyContent17 = async () => {
+            let text = document.getElementById('myText17').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy17').innerHTML = "Copied !"
+        }
+
+        const copyContent18 = async () => {
+            let text = document.getElementById('myText18').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy18').innerHTML = "Copied !"
+        }
+
+        const copyContent19 = async () => {
+            let text = document.getElementById('myText19').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy19').innerHTML = "Copied !"
+        }
+
+        const copyContent20 = async () => {
+            let text = document.getElementById('myText20').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy20').innerHTML = "Copied !"
+        }
+
+        const copyContent21 = async () => {
+            let text = document.getElementById('myText21').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy21').innerHTML = "Copied !"
+        }
+
+        const copyContent22 = async () => {
+            let text = document.getElementById('myText22').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy22').innerHTML = "Copied !"
+        }
+
+        const copyContent23 = async () => {
+            let text = document.getElementById('myText23').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy23').innerHTML = "Copied !"
+        }
+
+        const copyContent24 = async () => {
+            let text = document.getElementById('myText24').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy24').innerHTML = "Copied !"
+        }
+
+        const copyContent25 = async () => {
+            let text = document.getElementById('myText25').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy25').innerHTML = "Copied !"
+        }
+
+        const copyContent26 = async () => {
+            let text = document.getElementById('myText26').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy26').innerHTML = "Copied !"
+        }
+
+        const copyContent27 = async () => {
+            let text = document.getElementById('myText27').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy27').innerHTML = "Copied !"
+        }
+
+        const copyContent28 = async () => {
+            let text = document.getElementById('myText28').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy28').innerHTML = "Copied !"
+        }
+
+        const copyContent29 = async () => {
+            let text = document.getElementById('myText29').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy29').innerHTML = "Copied !"
+        }
+
+        const copyContent30 = async () => {
+            let text = document.getElementById('myText30').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy30').innerHTML = "Copied !"
+        }
+
+        const copyContent31 = async () => {
+            let text = document.getElementById('myText31').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy31').innerHTML = "Copied !"
+        }
+
+        const copyContent32 = async () => {
+            let text = document.getElementById('myText32').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy32').innerHTML = "Copied !"
+        }
+    </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Learn Coding- Blogs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="https://kit.fontawesome.com/63acc2c5e9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    {{>navbar data=details}}
+    
+    {{!-- SLUG2 --}}
+
+    <div class="container my-4 py-4">
+        <h5 class="card-title fs-2 fw-bolder">Flask cheatsheet <hr class="w-75" /></h5>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Importing Flask</span>
+            <span id="myText" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">from flask import Flask</span> <button id="cpy" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Most used import functions</span>
+            <span  id="myText1" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">from flask import Flask, render_template, redirect, url_for, request</span> <button id="cpy1" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent1()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Boilerplate code</span>
+            <span id="myText2"  class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">from flask import Flask<br /><br />app = Flask(__name__)<br /><br />@app.route("/")<br />def hello_world():<br />    return "<p>Hello, World!</p>"<br /> app.run()</span> <button id="cpy2" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent2()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Creating a route</span>
+            <span id="myText3" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">@app.route("/")</span> <button id="cpy3" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent3()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Setting Allowed methods</span>
+            <span id="myText4" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">methods = ['GET', 'POST']</span> <button id="cpy4" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent4()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Re-run while coding</span>
+            <span  id="myText5" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">app.run(debug=True)</span> <button id="cpy5" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent5()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Change host</span>
+            <span id="myText6" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">app.run(host='0.0.0.0')</span> <button id="cpy6" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent6()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Change port</span>
+            <span id="myText7" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">app.run(port=80)</span> <button id="cpy7" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent7()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Importing SQLAlchemy</span>
+            <span id="myText8" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">from flask_sqlalchemy import SQLAlchemy</span> <button id="cpy8" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent8()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Database URI</span>
+            <span id="myText9" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://username:password@localhost/db_name' <br />or <br />app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'</span> <button id="cpy9" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent9()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Initialization</span>
+            <span id="myText10" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">db = SQLAlchemy(app)</span> <button id="cpy10" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent10()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Creating a Model</span>
+            <span id="myText11" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">class TableName(db.Model): 
+    <br /> column_1 = db.Column(db.Integer, primary_key=True)
+    <br />column_2 = db.Column(db.String(80), nullable=False)
+    <br />column_3 = db.Column(db.String(12), nullable=False)</span> <button id="cpy11" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent11()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Get all data - all() method</span>
+            <span id="myText12" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">data = ClassName.query.filter_by().all()</span> <button id="cpy12" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent12()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Filtered data - first() methodk</span>
+            <span id="myText13" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">data = ClassName.query.filter_by().first()</span> <button id="cpy13" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent13()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Send/add data to database</span>
+            <span id="myText14" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">data_to_send = ClassName(column_1=dataset1, column_2=dataset2, column_3=dataset3) 
+<br />db.session.add(data_to_send) 
+<br />db.session.commit()</span> <button id="cpy14" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent14()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Delete data from the database</span>
+            <span id="myText15" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">data_to_send = ClassName(column_1=dataset1, column_2=dataset2, column_3=dataset3)
+<br />db.session.delete(data_to_send)
+<br />db.session.commit()</span> <button id="cpy15" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent15()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Request method</span>
+            <span id="myText16" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">request.method</span> <button id="cpy16" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent16()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Render Template</span>
+            <span id="myText17" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">render_template("file.html")</span> <button id="cpy17" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent17()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Solving FSADeprecationWarning</span>
+            <span id="myText18" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False</span> <button id="cpy18" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent18()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Creating Database files</span>
+            <span id="myText19" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">from yourapplicationname import db 
+<br />db.create_all() 
+<br />exit()</span> <button id="cpy19" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent19()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Method to return database items</span>
+            <span id="myText20" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">
+def __repr__(self) -> str: 
+    <br />return f"{self.item}"</span> <button id="cpy20" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent20()">Copy !</button>
+        </div>
+        <div class="d-flex flex-column py-2">
+            <span class=" py-2 fw-bold ">Printing returned content from the method</span>
+            <span id="myText21" class="w-75 text-light py-1 px-3 bg-secondary rounded" style=" overflow: auto; white-space: nowrap;">data = ClassNameWithMethod.query.all() 
+<br />print(data)</span> <button id="cpy21" class="text-primary fw-bold btn border-0 d-flex align-items-start" onclick="copyContent21()">Copy !</button>
+        </div>
+
+    </div>
+
+    {{>footer}}
+
+
+    <script>
+        
+        const copyContent = async () => {
+            let text = document.getElementById('myText').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy').innerHTML = "Copied !"
+        }
+
+        const copyContent1 = async () => {
+            let text = document.getElementById('myText1').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy1').innerHTML = "Copied !"
+        }
+
+        const copyContent2 = async () => {
+            let text = document.getElementById('myText2').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy2').innerHTML = "Copied !"
+        }
+
+        const copyContent3 = async () => {
+            let text = document.getElementById('myText3').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy3').innerHTML = "Copied !"
+        }
+
+        const copyContent4 = async () => {
+            let text = document.getElementById('myText4').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy4').innerHTML = "Copied !"
+        }
+
+        const copyContent5 = async () => {
+            let text = document.getElementById('myText5').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy5').innerHTML = "Copied !"
+        }
+
+        const copyContent6 = async () => {
+            let text = document.getElementById('myText6').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy6').innerHTML = "Copied !"
+        }
+
+        const copyContent7 = async () => {
+            let text = document.getElementById('myText7').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy7').innerHTML = "Copied !"
+        }
+
+        const copyContent8 = async () => {
+            let text = document.getElementById('myText8').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy8').innerHTML = "Copied !"
+        }
+
+        const copyContent9 = async () => {
+            let text = document.getElementById('myText9').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy9').innerHTML = "Copied !"
+        }
+
+        const copyContent10 = async () => {
+            let text = document.getElementById('myText10').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy10').innerHTML = "Copied !"
+        }
+
+        const copyContent11 = async () => {
+            let text = document.getElementById('myText11').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy11').innerHTML = "Copied !"
+        }
+
+        const copyContent12 = async () => {
+            let text = document.getElementById('myText12').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy12').innerHTML = "Copied !"
+        }
+
+        const copyContent13 = async () => {
+            let text = document.getElementById('myText13').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy13').innerHTML = "Copied !"
+        }
+
+        const copyContent14 = async () => {
+            let text = document.getElementById('myText14').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy14').innerHTML = "Copied !"
+        }
+
+        const copyContent15 = async () => {
+            let text = document.getElementById('myText15').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy15').innerHTML = "Copied !"
+        }
+
+        const copyContent16 = async () => {
+            let text = document.getElementById('myText16').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy16').innerHTML = "Copied !"
+        }
+
+        const copyContent17 = async () => {
+            let text = document.getElementById('myText17').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy17').innerHTML = "Copied !"
+        }
+
+        const copyContent18 = async () => {
+            let text = document.getElementById('myText18').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy18').innerHTML = "Copied !"
+        }
+
+        const copyContent19 = async () => {
+            let text = document.getElementById('myText19').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy19').innerHTML = "Copied !"
+        }
+
+        const copyContent20 = async () => {
+            let text = document.getElementById('myText20').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy20').innerHTML = "Copied !"
+        }
+
+        const copyContent21 = async () => {
+            let text = document.getElementById('myText21').innerHTML;
+            await navigator.clipboard.writeText(text);
+            document.getElementById('cpy21').innerHTML = "Copied !"
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
