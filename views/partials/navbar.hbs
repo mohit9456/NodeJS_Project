@@ -2,25 +2,37 @@
     border-top: 3px solid #ef8236;
     box-shadow: 0 1px 5px #00000033;">
   <div class="container">
-    <a class="navbar-brand fs-4 fw-bold nav-logo" href="#">
-      <img class="nav-logo-2" src="{{data.brandIconUrl}}" alt="Bootstrap" style ="border-radius:50%;" width="50" height="50">
+    <a class="navbar-brand fs-4 fw-bold nav-logo" href="/">
+      <img class="nav-logo-2" src="{{data.brandIconUrl}}" alt="Bootstrap" style="border-radius:50%;" width="50"
+        height="50">
       <span class="nav-logo-1">{{data.brandName}}</span>
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      
+
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <a class=" px-3 nav-link links-1 active fw-bold link-info" aria-current="page" href="/"><i class="fa-solid fa-house"></i></a>
+        <a class=" px-3 nav-link links-1 active fw-bold link-info" aria-current="page" href="/"><i
+            class="fa-solid fa-house"></i></a>
         {{#each data.links}}
         <li class="nav-item">
-          
-          <a class=" px-3 nav-link links-1 active fw-bold link-dark" aria-current="page" href="{{this.url}}">{{this.label}}</a>
+
+          <a class=" px-3 nav-link links-1 active fw-bold link-dark" aria-current="page"
+            href="{{this.url}}">{{this.label}}</a>
+
         </li>
         {{/each}}
-        
+        <a id="login-1" href="/login" class="text-decoration-none"><button onclick="btn_login()" class="btn px-3 nav-link active btn-primary text-light m-3">Log in</button></a>
+        <a id="login-2" href="/logout" class="text-decoration-none"><button onclick="btn_logout()" class="btn px-3 nav-link active btn-primary text-light m-3">Log out</button></a>
       </ul>
+      
+
     </div>
+
   </div>
+
 </nav>
+

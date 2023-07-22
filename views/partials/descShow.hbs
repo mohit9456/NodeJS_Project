@@ -1,0 +1,17 @@
+<div class="card w-50 mb-3 mx-5 my-3 p-3" style="background-color: #fcfcfc;
+    box-shadow: 0 1px 5px #00000033; width: 50%;">
+  <div class="card-body">
+    <h4>Comments</h5>
+    {{#each desc}}
+    <hr />
+    <div class="d-flex flex-row bg-white rounded-1" style="box-shadow: 0 1px 5px #00000033;">
+      <div class="p-2 ml-1">
+        <i class="fa-solid fa-user"></i>
+      </div>
+        
+        <p class="mx-3 pt-2">{{this.comment}}</p>
+    </div>
+    <hr />
+    {{/each}}
+  </div>
+</div>

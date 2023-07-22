@@ -8,12 +8,16 @@ const Slider = require("./models/slider");
 const Service = require("./models/service");
 const Technical = require("./models/technical");
 const Blog = require("./models/blog");
+const Auth = require("./models/auth");
+const cookieParser = require("cookie-parser");
 
 const bodyParser = require("body-parser");
 
 app.use(bodyParser.urlencoded({
     extended: true
 }))
+
+app.use(cookieParser());
 
 app.use('/static', express.static("public"))
 app.use('', routes);
