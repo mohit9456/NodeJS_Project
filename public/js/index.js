@@ -6,9 +6,6 @@ function btn_login(){
 function btn_logout(){
     localStorage.removeItem("name");
 }
-console.log(localStorage.getItem("name"));
-
-
 
 
 if( localStorage.getItem("name")){
