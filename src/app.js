@@ -1,4 +1,5 @@
 const express = require("express");
+var path = require('path');
 const hbs = require("hbs");
 const app = express();
 const routes = require('./routes/main');
@@ -10,6 +11,7 @@ const Technical = require("./models/technical");
 const Blog = require("./models/blog");
 const Auth = require("./models/auth");
 const cookieParser = require("cookie-parser");
+var favicon = require('serve-favicon')
 
 const bodyParser = require("body-parser");
 
@@ -20,6 +22,7 @@ app.use(bodyParser.urlencoded({
 app.use(cookieParser());
 
 app.use('/static', express.static("public"))
+app.use(favicon(path.join(__dirname, 'favicon.ico')))
 app.use('', routes);
 
 // app.get("/", (req, res) => {
